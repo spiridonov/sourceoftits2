@@ -1,0 +1,22 @@
+.TitsNav {
+  margin: 0;
+  background: #252424;
+  height: 60px;
+}
+
+.TitsNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.TitsNav ul li {
+  float: left;
+  margin: 10px 0 0 3em;
+}
+
+.TitsNav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 3em;
+}

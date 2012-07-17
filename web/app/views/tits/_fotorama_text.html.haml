@@ -1,0 +1,25 @@
+.Text{ :id => "text_#{tits.id}" }
+  =link_to 'More...', tits_path(tits.id), :target => "_blank"
+  %br
+  %b Added at
+  = tits.added_at.to_s :tits
+  %b by
+  Stanislav
+  %br
+  .Actions
+    - if tits.pending?
+      %b Pending
+      = link_to 'Approve', approve_tits_path(tits), :method => :put, :remote => true
+      |
+      = link_to 'Reject', reject_tits_path(tits), :method => :put, :remote => true
+    - elsif tits.approved?
+      %b Approved
+      = link_to 'Reject', reject_tits_path(tits), :method => :put, :remote => true
+    - elsif tits.rejected?
+      %b Rejected
+      = link_to 'Approve', approve_tits_path(tits), :method => :put, :remote => true
+
+  .Similar
+    - tits.similarities do |s|
+      = link_to tits_path(s.id), :target => "_blank" do
+        = image_tag s.preview.to_s, :size => '60x60', :class => [s.state.to_s.capitalize, "sim_#{s.id}"]

@@ -1,0 +1,6 @@
+process_tits:
+  every: 1h
+  class: ProcessTits
+  queue: process_tits
+  args:
+  description:

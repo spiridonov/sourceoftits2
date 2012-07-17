@@ -1,0 +1,14 @@
+development:
+  host: localhost
+  database: sourceoftits_development
+
+test:
+  host: localhost
+  database: sourceoftits_test
+
+production:
+  host: 
+  port: 
+  database: 
+  username: 
+  password: 

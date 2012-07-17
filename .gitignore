@@ -1,0 +1,12 @@
+*.rbc
+.idea
+*.rdb
+.rspec
+/web/.bundle
+/web/vendor/bundle
+/web/log/*
+/web/tmp/
+**.orig
+.DS_Store
+/web/public/uploads
+/web/public/assets

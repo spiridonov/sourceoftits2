@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:tits] = "%d.%m.%Y %H:%M:%S"

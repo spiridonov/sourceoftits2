@@ -1,0 +1,32 @@
+# Amazon Web Services credentials
+aws:
+  account_id: 
+  access_key_id: 
+  secret_access_key: 
+  keypair_name: 
+  availability_zone: us-east-1a
+
+# Global script params
+ec2:
+  image_id: ami-480df921 # Canonical Ubuntu 10.04, EBS boot, i386
+  instance_type: t1.micro
+  ssh_user: ubuntu
+
+setup:
+  ec2 basics image_magick monit ruby pcre passenger opencv redis webapp resque update resque_scheduler
+
+passenger:
+  version: 3.0.11
+
+webapp:
+  name: sourceoftits
+  github_user: spiridonov
+  github_repo: spiridonov/sourceoftits2
+  app_subdir: web
+  rails_env: production
+
+# Nodes and their script params
+nodes:
+  sourceoftits:
+    ec2:
+      elastic_ip:

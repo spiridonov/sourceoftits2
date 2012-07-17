@@ -1,0 +1,29 @@
+h1{
+  color: #ccc;
+  font-size: 30px;
+}
+
+h2{
+  margin: 0 0 20px;
+  color: #feffff;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+h3{
+  margin: 0 0 10px;
+  color: #feffff;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+p{
+  font-size: 15px;
+  line-height: 1.8em;
+  margin: 0 0 30px;
+}
+
+ul, ol{
+  font-size: 15px;
+  line-height: 1.8em;
+}

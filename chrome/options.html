@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Source Of Tits extension settings</title>
+    <script src="helpers.js"></script>
+    <script type="text/javascript">
+      var defaultSettings = {
+        consumer_key : '',
+        consumer_secret : '',
+        access_key : '',
+        access_secret : '',
+        interval : 30,
+      };
+
+      function save_options() {
+        foreach(defaultSettings, function(k, v) {
+          localStorage[k] = document.getElementById(k).value;
+        });
+      }
+
+      function restore_options() {
+        foreach(defaultSettings, function(k, v) {
+          var savedValue = localStorage[k];
+          var element = document.getElementById(k);
+          if (element) {
+            element.value = (savedValue) ? savedValue : v;
+          }
+        });
+      }
+    </script>
+    <style type="text/css">
+      body {
+        font-family: 'trebuchet ms', helvetica, arial, sans-serif;
+        font-size: 18px;
+        color: #222;
+        background: #fff;
+        margin: 0;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: normal;
+        margin-top: 0;
+      }
+
+      input {
+        vertical-align : top;
+      }
+
+      input[type=text] {
+        font-size: 16px;
+      }
+
+      .row {
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body onload="restore_options()">
+    <h1>Source of Tits extension settings</h1>
+
+    <div class="row">
+      Consumer Key:<br>
+      <input type="text" id="consumer_key" size="80" />
+    </div>
+
+    <div class="row">
+      Consumer Secret:<br>
+      <input type="text" id="consumer_secret" size="80" /><br>
+    </div>
+
+    <div class="row">
+      Access Key:<br>
+      <input type="text" id="access_key" size="80" /><br>
+    </div>
+
+    <div class="row">
+      Access Secret:<br>
+      <input type="text" id="access_secret" size="80" /><br>
+    </div>
+
+    <div class="row">
+      Interval (minutes):<br>
+      <input type="number" min="1" id="interval"><br>
+    </div>
+
+    <button onclick="save_options()">Save</button>
+  </body>
+</html>

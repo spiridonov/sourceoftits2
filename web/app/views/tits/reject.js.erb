@@ -1,0 +1,7 @@
+$("#text_<%= @tits.id %> .Actions").html("<b>Rejected</b> <%= escape_javascript(link_to 'Approve', approve_tits_path(@tits), :method => :put, :remote => true) %>");
+
+var htmls = $('#fotorama').data('options').html;
+var size = $('#fotorama').data('size');
+for (var i = 0; i < size; i++) {
+  htmls[i].find(".sim_<%= @tits.id %>").removeClass('Pending Approved Rejected Published').addClass('Rejected');
+}

@@ -1,0 +1,43 @@
+.Text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 2px;
+  border-color: #fff;
+  border-style: solid;
+  background: rgba(255, 255, 255, .5);
+  color: #000;
+  font-size: 1em;
+  padding: 5px;
+}
+
+.Text a {
+  font-size: 1.2em;
+}
+
+.Text .Similar {
+  margin: 5px 0 0 0;
+}
+
+.Text .Similar a {
+  text-decoration: none;
+}
+
+img.Pending {
+  border-color: #ffffff;
+  border-width: 2px;
+  border-style: solid;
+}
+
+img.Approved,
+img.Published {
+  border-color: #00ee00;
+  border-width: 2px;
+  border-style: solid;
+}
+
+img.Rejected {
+  border-color: #ee0000;
+  border-width: 2px;
+  border-style: solid;
+}

@@ -1,0 +1,35 @@
+%b Id:
+= @tits.id
+
+%br
+%b Source:
+= @tits.link
+
+%br
+%b Fingerprint:
+= @tits.fingerprint
+
+%br
+%b State:
+- if @tits.pending?
+  Pending
+- elsif @tits.approved?
+  Approved
+- elsif @tits.rejected?
+  Rejected
+- elsif @tits.published?
+  Published
+  at
+  = @tits.published_at.to_s :tits
+%br
+%b Added at:
+= @tits.added_at.to_s :tits
+
+%br
+%br
+= image_tag @tits.link
+
+%br
+- @tits.similarities do |s|
+  = link_to tits_path(s.id), :target => "_blank" do
+    = image_tag s.preview.to_s, :height => 100, :width => :auto

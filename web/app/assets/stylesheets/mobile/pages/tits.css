@@ -1,0 +1,39 @@
+.Text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border: 2px;
+  border-color: #fff;
+  border-style: solid;
+  background: rgba(255, 255, 255, .5);
+  padding: 5px;
+}
+
+.Text a {
+  font-size: 7em;
+  color: #000;
+  text-decoration: none;
+}
+
+.Text .Similar {
+  margin: 0;
+}
+
+img.Pending {
+  border-color: #ffffff;
+  border-width: 3px;
+  border-style: solid;
+}
+
+img.Approved,
+img.Published {
+  border-color: #00ee00;
+  border-width: 3px;
+  border-style: solid;
+}
+
+img.Rejected {
+  border-color: #ee0000;
+  border-width: 3px;
+  border-style: solid;
+}

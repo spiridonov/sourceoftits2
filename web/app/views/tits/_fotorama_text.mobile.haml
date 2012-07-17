@@ -1,0 +1,12 @@
+.Text{ :id => "text_#{tits.id}" }
+  .Actions
+    - if tits.pending?
+      = link_to '✓', approve_tits_path(tits), :method => :put, :remote => true
+      = link_to '╳', reject_tits_path(tits), :method => :put, :remote => true
+    - elsif tits.approved?
+      = link_to '╳', reject_tits_path(tits), :method => :put, :remote => true
+    - elsif tits.rejected?
+      = link_to '✓', approve_tits_path(tits), :method => :put, :remote => true
+  .Similar
+    - tits.similarities do |s|
+      = image_tag s.preview.to_s, :size => '150x150', :class => [s.state.to_s.capitalize, "sim_#{s.id}"]

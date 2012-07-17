@@ -1,0 +1,16 @@
+{
+  "description" : "Source of tits (Dedicated)",
+  "options_page" : "options.html",
+  "background_page" : "background.html",
+  "icons" : {
+    "16" : "tits.png"
+  },
+  "name" : "tits | source of tits | dedicated",
+  "permissions" : [ 
+    "http://*/*", 
+    "https://*/*", 
+    "contextMenus",
+    "tabs"
+  ],
+  "version" : "0.1"
+}

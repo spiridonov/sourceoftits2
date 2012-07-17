@@ -1,0 +1,12 @@
+.TitsNav {
+  margin: 0;
+  padding: 5px 0 0 25px;
+  background: #252424;
+  height: 55px;
+  font-size: 2.5em;
+}
+
+.TitsNav a {
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,35 @@
+= render '/shared/header'
+
+.TitsGallery
+  #fotorama
+    - @tits_list.each do |tits|
+      = render 'fotorama_photo', :tits => tits
+
+  #fotorama_text{ :style => "display: none;" }
+    - @tits_list.each do |tits|
+      = render 'fotorama_text', :tits => tits
+
+:javascript
+  $(function() {
+    var fotorama_text = $('.Text', '#fotorama_text');
+    var html = {};
+    for (var i = 0; i < fotorama_text.length; i++) {
+      html[i] = fotorama_text.eq(i)
+    }
+
+    $('#fotorama').fotorama({
+      fitToWindowHeight: true,
+      width: '100%',
+      height: '100%',
+      verticalMargin: 60,
+      touchStyle: true,
+      minPadding: 0,
+      thumbBorderColor: '#F0B',
+      thumbBorderWidth: 3,
+      thumbMargin: 3,
+      thumbSize: 60,
+      hash: true,
+      nav: 'none',
+      html: html
+    });
+  });
